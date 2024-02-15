@@ -1,0 +1,130 @@
+Final Keyword
+
+import java.util.*;
+
+class Person{
+  private final int age;
+  String name;
+  Person(int age, String name){
+    this.age = age;
+    this.name = name;
+  }
+  void get(){
+      System.out.printf("Name %s with age %d\n", name, age);
+  }
+}
+
+class FinalKeyword{
+   public static void main(String[] args){
+     Scanner in = new Scanner(System.in);
+     int n = in.nextInt();
+     int age;
+     String name;
+     Person[] p;
+     p = new Person[n];
+     for(int i = 0; i < n; i++){
+       name =  in.next();
+       age = in.nextInt();
+       p[i] = new Person(age, name);
+     }
+     for(int i = 0; i < n; i++) p[i].get();
+   }
+}
+
+Person
+
+import java.util.*;
+
+class Person{
+  int age;
+  String name;
+  Person(int age, String name){
+    this.age = age;
+    this.name = name;
+  }
+}
+
+class PersonOops{
+   public static void main(String[] args){
+     Scanner in = new Scanner(System.in);
+     int n = in.nextInt();
+     int age;
+     String name;
+     Person[] p;
+     p = new Person[n];
+     for(int i = 0; i < n; i++){
+       name =  in.next();
+       age = in.nextInt();
+       p[i] = new Person(age, name);
+     }
+     for(int i = 0; i < n; i++) System.out.printf("Name %s with age %d\n", p[i].name, p[i].age);
+   }
+}
+
+
+Rectangle
+
+import java.util.*;
+
+class Rectangle{
+  double width, height;
+ 
+  double Area(){
+    return width * height;
+  }
+  double Perimeter(){
+    return 2 *(width + height);
+  }
+}
+class RectangleOops{
+  public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    Rectangle[] p;
+    p = new Rectangle[n];
+    for(int i = 0; i < n; i++){
+      p[i] = new Rectangle();
+      p[i].width = in.nextDouble();
+      p[i].height = in.nextDouble();
+    }
+    for(int i = 0; i < n; i++){
+      System.out.println("---------------------------------");
+      System.out.println("The area of the rectangle is "+ p[i].Area());
+      System.out.println("The perimeter of the rectangle is "+ p[i].Perimeter());
+    }
+  }
+}
+
+Circle
+
+
+import java.util.*;
+
+class Circle{
+  double rad;
+  Circle(double rad){
+    this.rad = rad;
+  }
+  void printResult(){
+    System.out.printf("Radius of the circle is %.0f\n",rad);
+    System.out.println("The area of the circle is "+(Math.PI*rad*rad));
+    System.out.println("The circumference of the circle is "+(2*Math.PI*rad));
+  }
+}
+
+class CircleOops{
+  public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    Circle[] c;
+    c = new Circle[n];
+    double r;
+    for(int i = 0; i < n; i++){
+      r = in.nextDouble();
+      c[i] = new Circle(r);
+    }
+    for(int i = 0; i < n; i++){
+      c[i].printResult();
+    }
+  }
+}
